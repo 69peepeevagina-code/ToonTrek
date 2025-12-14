@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToonTrek: Urban Legends</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Nunito:wght@400;700;900&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'neon-pink': '#ff00ff',
+              'neon-blue': '#00ffff',
+              'neon-green': '#00ff00',
+            },
+            fontFamily: {
+              'orbitron': ['Orbitron', 'sans-serif'],
+              'toon': ['Spicy Rice', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+      .font-toon {
+        font-family: 'Spicy Rice', cursive;
+      }
+      
+      /* DDR STYLES */
+      .drop-shadow-neon {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+      }
+      .shake {
+        animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+      }
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0); }
+        20%, 80% { transform: translate3d(2px, 0, 0); }
+        30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+        40%, 60% { transform: translate3d(4px, 0, 0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-slate-100 h-screen overflow-hidden selection:bg-neon-pink selection:text-white">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>
